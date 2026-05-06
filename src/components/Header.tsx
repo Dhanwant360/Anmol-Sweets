@@ -1,9 +1,13 @@
-import { ShoppingBag, MapPin, Phone, Menu, X } from 'lucide-react';
+import { ShoppingBag, MapPin, Phone, Menu as MenuIcon, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useState } from 'react';
+import { useCart } from '../context/CartContext';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const { cartItems, setIsCartOpen } = useCart();
+
+  const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <header className="bg-surface/95 backdrop-blur-md sticky top-0 z-50 border-b border-primary/10 shadow-sm">
@@ -35,12 +39,17 @@ export default function Header() {
             <Phone size={18} />
             <span>0182 427 6972</span>
           </div>
-          <div className="flex gap-2 lg:gap-4">
+          <div className="flex gap-2 lg:gap-4 items-center">
             <button 
-              onClick={() => alert("Your cart is currently empty.")}
-              className="p-2 text-on-surface hover:bg-primary/5 rounded-full transition-all"
+              onClick={() => setIsCartOpen(true)}
+              className="relative p-2 text-on-surface hover:bg-primary/5 rounded-full transition-all"
             >
               <ShoppingBag size={22} />
+              {totalItems > 0 && (
+                <span className="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
+                  {totalItems}
+                </span>
+              )}
             </button>
             <a 
               href="#location"
@@ -52,7 +61,7 @@ export default function Header() {
               className="md:hidden p-2 text-on-surface hover:bg-primary/5 rounded-full transition-all"
               onClick={() => setIsOpen(!isOpen)}
             >
-              {isOpen ? <X size={22} /> : <Menu size={22} />}
+              {isOpen ? <X size={22} /> : <MenuIcon size={22} />}
             </button>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { ShoppingBag } from 'lucide-react';
+import { useCart } from '../context/CartContext';
 
 const menuCategories = [
   {
@@ -35,8 +36,15 @@ const menuCategories = [
 ];
 
 export default function Menu() {
-  const handleOrder = (itemName: string) => {
-    alert(`Added ${itemName} to your cart!`);
+  const { addToCart } = useCart();
+
+  const handleOrder = (item: any) => {
+    addToCart({
+      id: item.name,
+      name: item.name,
+      price: item.price,
+      quantity: 1
+    });
   };
 
   return (
@@ -69,7 +77,7 @@ export default function Menu() {
                     <div className="flex flex-col items-end gap-2 shrink-0 ml-4">
                       <span className="font-bold text-primary">{item.price}</span>
                       <button 
-                        onClick={() => handleOrder(item.name)}
+                        onClick={() => handleOrder(item)}
                         className="flex items-center gap-1 text-xs bg-primary/10 hover:bg-primary text-primary hover:text-white px-3 py-1.5 rounded-full transition-colors"
                       >
                         <ShoppingBag size={14} /> Add
