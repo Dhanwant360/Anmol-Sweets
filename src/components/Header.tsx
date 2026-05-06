@@ -9,6 +9,17 @@ export default function Header() {
 
   const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
 
+  const handleMobileNavClick = (e: React.MouseEvent<HTMLAnchorElement>, itemId: string) => {
+    e.preventDefault();
+    setIsOpen(false);
+    setTimeout(() => {
+      const element = document.getElementById(itemId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 150);
+  };
+
   return (
     <header className="bg-surface/95 backdrop-blur-md sticky top-0 z-50 border-b border-primary/10 shadow-sm">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -79,7 +90,7 @@ export default function Header() {
                 <a
                   key={item}
                   href={`#${item.toLowerCase().replace(' ', '-')}`}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => handleMobileNavClick(e, item.toLowerCase().replace(' ', '-'))}
                   className="text-base font-semibold text-on-surface-variant hover:text-primary transition-colors py-2"
                 >
                   {item}
