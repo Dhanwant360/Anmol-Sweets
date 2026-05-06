@@ -1,6 +1,6 @@
 import { ShoppingBag, MapPin, Phone, Menu as MenuIcon, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useCart } from '../context/CartContext';
 
 export default function Header() {
