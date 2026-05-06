@@ -55,6 +55,9 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-surface font-sans text-on-surface;
   }

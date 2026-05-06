@@ -25,9 +25,7 @@ export default function Header() {
             <a
               key={item}
               href={`#${item.toLowerCase().replace(' ', '-')}`}
-              className={`text-sm font-semibold tracking-wide transition-colors hover:text-primary ${
-                item === 'Mithai' ? 'text-primary border-b-2 border-primary pb-1' : 'text-on-surface-variant'
-              }`}
+              className="text-sm font-semibold tracking-wide transition-colors hover:text-primary text-on-surface-variant hover:border-b-2 hover:border-primary pb-1"
             >
               {item}
             </a>

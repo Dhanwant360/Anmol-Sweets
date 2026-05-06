@@ -18,10 +18,10 @@ export default function About() {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="absolute -bottom-8 -right-8 bg-primary p-8 rounded-2xl shadow-xl hidden md:block">
+          <div className="absolute -bottom-4 -right-4 md:-bottom-8 md:-right-8 bg-primary p-4 md:p-8 rounded-2xl shadow-xl flex items-center justify-center">
             <div className="text-on-primary text-center">
-              <span className="block font-serif text-5xl leading-none font-bold mb-2">25+</span>
-              <span className="text-xs uppercase tracking-widest font-bold opacity-90">Years of Heritage</span>
+              <span className="block font-serif text-4xl md:text-5xl leading-none font-bold mb-1 md:mb-2">25+</span>
+              <span className="text-[10px] md:text-xs uppercase tracking-widest font-bold opacity-90">Years of Heritage</span>
             </div>
           </div>
         </motion.div>
