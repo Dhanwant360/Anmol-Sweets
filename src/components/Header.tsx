@@ -46,7 +46,7 @@ export default function Header() {
         <div className="flex items-center gap-4 lg:gap-6">
           <div className="hidden lg:flex items-center gap-2 text-primary font-bold">
             <Phone size={18} />
-            <span>0182 427 6972</span>
+            <span>+91 62840 37360</span>
           </div>
           <div className="flex gap-2 lg:gap-4 items-center">
             <button 
@@ -98,7 +98,7 @@ export default function Header() {
               ))}
               <div className="flex items-center gap-2 text-primary font-bold pt-4 border-t border-primary/10">
                 <Phone size={18} />
-                <span>0182 427 6972</span>
+                <span>+91 62840 37360</span>
               </div>
             </div>
           </motion.div>

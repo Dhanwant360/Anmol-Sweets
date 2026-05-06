@@ -15,7 +15,7 @@ export default function CartDrawer() {
     message += `\nEstimated Total: ₹${cartTotal}\n\nPlease confirm my order.`;
     
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/911824276972?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/916284037360?text=${encodedMessage}`, '_blank');
   };
 
   return (
