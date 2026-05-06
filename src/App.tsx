@@ -6,7 +6,7 @@ import About from './components/About';
 import Testimonials from './components/Testimonials';
 import Location from './components/Location';
 import Footer from './components/Footer';
-import WhatsAppButton from './components/WhatsAppButton';
+import FloatingCartButton from './components/FloatingCartButton';
 import { CartProvider } from './context/CartContext';
 import CartDrawer from './components/CartDrawer';
 
@@ -24,7 +24,7 @@ export default function App() {
           <Location />
         </main>
         <Footer />
-        <WhatsAppButton />
+        <FloatingCartButton />
         <CartDrawer />
       </div>
     </CartProvider>
