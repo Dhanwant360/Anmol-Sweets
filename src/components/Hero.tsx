@@ -12,7 +12,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
+      <div className="max-w-7xl mx-auto px-6 relative z-10 w-full pt-16 lg:pt-0">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -28,11 +28,11 @@ export default function Hero() {
           <p className="font-sans text-lg text-on-surface-variant mb-10 leading-relaxed max-w-lg">
             Proudly serving the heart of Phagwara since years. We craft artisanal sweets and savory snacks with time-honored recipes and the finest ingredients.
           </p>
-          <div className="flex flex-wrap gap-4">
-            <a href="#mithai" className="bg-primary text-on-primary px-10 py-4 font-bold rounded-lg hover:bg-primary/90 transition-all shadow-lg active:scale-95 inline-block text-center">
+          <div className="flex flex-wrap gap-5 mt-4">
+            <a href="#mithai" className="bg-primary text-on-primary px-10 py-4 font-bold rounded-full hover:bg-primary/90 transition-all shadow-xl active:scale-95 inline-block text-center border-2 border-transparent">
               View Menu
             </a>
-            <a href="#about-us" className="border border-secondary text-secondary px-10 py-4 font-bold rounded-lg hover:bg-secondary/5 transition-all active:scale-95 inline-block text-center">
+            <a href="#about-us" className="bg-surface/80 backdrop-blur-sm border-2 border-primary text-primary px-10 py-4 font-bold rounded-full hover:bg-surface transition-all shadow-md active:scale-95 inline-block text-center">
               Our Story
             </a>
           </div>
