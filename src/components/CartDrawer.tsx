@@ -1,9 +1,22 @@
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Trash2, Plus, Minus, ShoppingBag } from 'lucide-react';
+import { X, Trash2, Plus, Minus, ShoppingBag, MessageCircle } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 
 export default function CartDrawer() {
   const { isCartOpen, setIsCartOpen, cartItems, updateQuantity, removeFromCart, cartTotal } = useCart();
+
+  const handleCheckout = () => {
+    if (cartItems.length === 0) return;
+    
+    let message = "Hello Anmol Sweets! I would like to place an order:\n\n";
+    cartItems.forEach(item => {
+      message += `- ${item.name} (${item.quantity}x)\n`;
+    });
+    message += `\nEstimated Total: ₹${cartTotal}\n\nPlease confirm my order.`;
+    
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/911824276972?text=${encodedMessage}`, '_blank');
+  };
 
   return (
     <AnimatePresence>
@@ -14,14 +27,14 @@ export default function CartDrawer() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setIsCartOpen(false)}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100]"
           />
           <motion.div
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed right-0 top-0 h-full w-full max-w-md bg-surface shadow-2xl z-50 flex flex-col"
+            className="fixed right-0 top-0 h-full w-full max-w-md bg-surface shadow-2xl z-[100] flex flex-col"
           >
             <div className="flex justify-between items-center p-6 border-b border-outline-variant/30">
               <h2 className="text-2xl font-serif font-bold text-primary flex items-center gap-2">
@@ -83,10 +96,11 @@ export default function CartDrawer() {
                   <span className="text-2xl font-bold text-primary">₹{cartTotal}</span>
                 </div>
                 <button
-                  onClick={() => alert('Checkout flow to be implemented!')}
-                  className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-md transition-all active:scale-[0.98]"
+                  onClick={handleCheckout}
+                  className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-md transition-all active:scale-[0.98] flex justify-center items-center gap-2"
                 >
-                  Proceed to Checkout
+                  <MessageCircle size={20} />
+                  Order on WhatsApp
                 </button>
               </div>
             )}
