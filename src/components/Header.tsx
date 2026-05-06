@@ -72,7 +72,7 @@ export default function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden border-t border-primary/10 bg-surface overflow-hidden"
+            className="md:hidden absolute top-full left-0 w-full border-t border-primary/10 bg-surface shadow-xl overflow-hidden z-40"
           >
             <div className="px-6 py-4 flex flex-col gap-4">
               {['Mithai', 'Snacks', 'Breakfast', 'About Us'].map((item) => (
