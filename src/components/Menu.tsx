@@ -12,7 +12,7 @@ const menuCategories = [
       { name: "Milk Cake", price: "₹750/kg", desc: "Rich and grainy traditional milk sweet.", image: "https://images.unsplash.com/photo-1605807646983-377bc5a76493?auto=format&fit=crop&q=80&w=800" },
       { name: "Gulab Jamun", price: "₹500/kg", desc: "Soft khoya dumplings in rose-scented syrup.", image: "/images/gulab_jamun_1779259363867.png" },
       { name: "Rasgulla", price: "₹450/kg", desc: "Soft and spongy cottage cheese dumplings soaked in sugar syrup.", image: "/images/rasgulla_1779259443846.png" },
-      { name: "Besan Ladoo", price: "₹550/kg", desc: "Roasted gram flour sweet rolled into spheres with nuts.", image: "https://images.unsplash.com/photo-1605807646983-377bc5a76493?auto=format&fit=crop&q=80&w=800" },
+      { name: "Besan Ladoo", price: "₹550/kg", desc: "Roasted gram flour sweet rolled into spheres with nuts.", image: "/images/besan_ladoo_1779260371252.png" },
       { name: "Rasmalai", price: "₹40/pc", desc: "Soft paneer discs soaked in thickened, sweetened cardamom milk.", image: "https://images.unsplash.com/photo-1599785209707-a456fc1337bb?auto=format&fit=crop&q=80&w=800" }
     ]
   },
@@ -25,8 +25,8 @@ const menuCategories = [
       { name: "Kachori", price: "₹30/pc", desc: "Flaky pastry stuffed with spicy lentil mix.", image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=800" },
       { name: "Aloo Tikki", price: "₹60/plate", desc: "Spiced potato patties served with chutneys.", image: "https://images.unsplash.com/photo-1541529086526-db283c563270?auto=format&fit=crop&q=80&w=800" },
       { name: "Samosa Chaat", price: "₹70/plate", desc: "Crushed samosas topped with chole, yogurt, and chutneys.", image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=800" },
-      { name: "Bhel Puri", price: "₹50/plate", desc: "Puffed rice tossed with veggies, tangy chutneys, and sev.", image: "https://images.unsplash.com/photo-1541529086526-db283c563270?auto=format&fit=crop&q=80&w=800" },
-      { name: "Khaman Dhokla", price: "₹250/kg", desc: "Soft, spongy savory steamed cake from Gujarat.", image: "https://images.unsplash.com/photo-1589301760014-d929f39ce9b1?auto=format&fit=crop&q=80&w=800" }
+      { name: "Bhel Puri", price: "₹50/plate", desc: "Puffed rice tossed with veggies, tangy chutneys, and sev.", image: "/images/bhel_puri_1779260420254.png" },
+      { name: "Khaman Dhokla", price: "₹250/kg", desc: "Soft, spongy savory steamed cake from Gujarat.", image: "/images/khaman_dhokla_1779260448824.png" }
     ]
   },
   {
@@ -34,11 +34,11 @@ const menuCategories = [
     title: "Breakfast Specials",
     items: [
       { name: "Cholle Bhature", price: "₹120/plate", desc: "Spicy chickpea curry with fluffy fried bread.", image: "/images/chole_bhature_1779259400547.png" },
-      { name: "Puri Sabzi", price: "₹100/plate", desc: "Traditional spiced potato curry with hot puris.", image: "https://images.unsplash.com/photo-1589301760014-d929f39ce9b1?auto=format&fit=crop&q=80&w=800" },
-      { name: "Aloo Paratha", price: "₹80/pc", desc: "Wheat flatbread stuffed with spiced potatoes, served with curd.", image: "https://images.unsplash.com/photo-1626082895617-2c6ad34744d3?auto=format&fit=crop&q=80&w=800" },
+      { name: "Puri Sabzi", price: "₹100/plate", desc: "Traditional spiced potato curry with hot puris.", image: "/images/puri_sabzi_1779260402953.png" },
+      { name: "Aloo Paratha", price: "₹80/pc", desc: "Wheat flatbread stuffed with spiced potatoes, served with curd.", image: "/images/aloo_paratha_1779260386710.png" },
       { name: "Jalebi Fafda", price: "₹150/plate", desc: "Classic sweet and savory weekend breakfast.", image: "/images/jalebi_1779259477450.png" },
-      { name: "Kanda Poha", price: "₹60/plate", desc: "Flattened rice cooked with onions, peanuts, and turmeric.", image: "https://images.unsplash.com/photo-1626082895617-2c6ad34744d3?auto=format&fit=crop&q=80&w=800" },
-      { name: "Pav Bhaji", price: "₹110/plate", desc: "Spiced mashed vegetable curry served with butter-toasted buns.", image: "https://images.unsplash.com/photo-1606491956689-2ea8869920e4?auto=format&fit=crop&q=80&w=800" }
+      { name: "Kanda Poha", price: "₹60/plate", desc: "Flattened rice cooked with onions, peanuts, and turmeric.", image: "/images/kanda_poha_1779260468021.png" },
+      { name: "Pav Bhaji", price: "₹110/plate", desc: "Spiced mashed vegetable curry served with butter-toasted buns.", image: "/images/pav_bhaji_1779260486942.png" }
     ]
   },
   {
@@ -47,7 +47,7 @@ const menuCategories = [
     items: [
       { name: "Punjabi Lassi", price: "₹60/glass", desc: "Thick and creamy yogurt drink topped with malai.", image: "/images/lassi_1779259461870.png" },
       { name: "Masala Chai", price: "₹25/cup", desc: "Spiced tea brewed with ginger, cardamom, and milk.", image: "https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&q=80&w=800" },
-      { name: "Badam Milk", price: "₹70/glass", desc: "Warm milk infused with saffron, almonds, and cardamom.", image: "https://images.unsplash.com/photo-1574681657850-20387b3b4f65?auto=format&fit=crop&q=80&w=800" },
+      { name: "Badam Milk", price: "₹70/glass", desc: "Warm milk infused with saffron, almonds, and cardamom.", image: "/images/badam_milk_1779260503869.png" },
       { name: "Cold Coffee", price: "₹80/glass", desc: "Creamy iced coffee blended with milk and ice cream.", image: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&q=80&w=800" },
       { name: "Fresh Lime Soda", price: "₹50/glass", desc: "Refreshing sweet and salty sparkling lime drink.", image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=800" }
     ]
